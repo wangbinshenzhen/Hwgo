@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleView">
+        <attr name="titleview_middle_1_text" format="string" />
+        <attr name="titleview_middle_1_textColor" format="color" />
+        <attr name="titleview_middle_1_textSize" format="dimension" />
+        <attr name="titleview_middle_2_text" format="string" />
+        <attr name="titleview_middle_2_textColor" format="color" />
+        <attr name="titleview_middle_2_textSize" format="dimension" />
+        <attr name="titleview_middle_paddingLeft" format="dimension" />
+        <attr name="titleview_middle_paddingRight" format="dimension" />
+        <attr name="titleview_left_text" format="string" />
+        <attr name="titleview_left_textColor" format="color" />
+        <attr name="titleview_left_textSize" format="dimension" />
+        <attr name="titleview_left_drawable" format="color|reference" />
+        <attr name="titleview_left_background" format="color|reference" />
+        <attr name="titleview_left_paddingLeft" format="dimension" />
+        <attr name="titleview_left_paddingRight" format="dimension" />
+        <attr name="titleview_left_2_text" format="string" />
+        <attr name="titleview_left_2_textColor" format="color" />
+        <attr name="titleview_left_2_textSize" format="dimension" />
+        <attr name="titleview_left_2_drawable" format="color|reference" />
+        <attr name="titleview_left_2_background" format="color|reference" />
+        <attr name="titleview_left_2_paddingLeft" format="dimension" />
+        <attr name="titleview_left_2_paddingRight" format="dimension" />
+        <attr name="titleview_right_text" format="string" />
+        <attr name="titleview_right_textColor" format="color" />
+        <attr name="titleview_right_textSize" format="dimension" />
+        <attr name="titleview_right_drawable" format="color|reference" />
+        <attr name="titleview_right_background" format="color|reference" />
+        <attr name="titleview_right_paddingLeft" format="dimension" />
+        <attr name="titleview_right_paddingRight" format="dimension" />
+        <attr name="titleview_right_2_text" format="string" />
+        <attr name="titleview_right_2_textColor" format="color" />
+        <attr name="titleview_right_2_textSize" format="dimension" />
+        <attr name="titleview_right_2_drawable" format="color|reference" />
+        <attr name="titleview_right_2_background" format="color|reference" />
+        <attr name="titleview_right_2_paddingLeft" format="dimension" />
+        <attr name="titleview_right_2_paddingRight" format="dimension" />
+    </declare-styleable>
+
+</resources>

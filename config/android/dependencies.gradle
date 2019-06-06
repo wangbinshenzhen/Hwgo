@@ -1,0 +1,48 @@
+def supportVersion = "27.1.1"
+
+rootProject.ext {
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: '28.0.3',
+            minSdkVersion    : 15,
+            targetSdkVersion : 28,
+            versionCode      : 1,//从versionName格式化而来
+            versionName      : '1.0.0'
+    ]
+    signing_default = [
+            keyAlias     : 'wangbin',
+            keyPassword  : 'w20050710',
+            storeFile    : file('config/android/wangbin.keystore'),
+            storePassword: 'w20050710'
+    ]
+
+    signing_release = [
+            keyAlias     : 'wangbin',
+            keyPassword  : 'w20050710',
+            storeFile    : file('config/android/wangbin.keystore'),
+            storePassword: 'w20050710'
+    ]
+    dependencies = [
+
+            "multidex"              : "com.android.support:multidex:1.0.2",
+            "appcompat-v7"          : "com.android.support:appcompat-v7:27.1.1",
+            "constraint-layout"     : "com.android.support.constraint:constraint-layout:1.0.2",
+            "okhttp"                : "com.squareup.okhttp3:okhttp:3.12.0",
+            "gson"                  : "com.google.code.gson:gson:2.8.5",
+            "rxJava"                : "io.reactivex.rxjava2:rxjava:2.x.y",
+            "rxAndroid"             : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            "retrofit"              : "com.squareup.retrofit2:retrofit:2.5.0",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:2.0.0-beta4",
+            "adapter-rxjava"        : "com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+            "rxlifecycle"           : "com.trello.rxlifecycle3:rxlifecycle:3.0.0",
+            "rxlifecycle_android"   : "com.trello.rxlifecycle3:rxlifecycle-android:3.0.0",
+            "rxlifecycle_components": "com.trello.rxlifecycle3:rxlifecycle-components:3.0.0",
+            "rxpermissions"         : "com.github.tbruyelle:rxpermissions:0.10.2",
+            "glide"                 : "com.github.bumptech.glide:glide:4.9.0",
+            "glide_compiler"        : "com.github.bumptech.glide:compiler:4.9.0",
+            "SmartRefreshLayout"    : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14',
+            "SmartRefreshHeader"    : 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+
+    ]
+
+}

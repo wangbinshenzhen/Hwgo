@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="util_contact_btn_yellow_default">#ffcf1f</color>
+    <color name="util_contact_dividing_line_light">#e6e6e6</color>
+    <color name="util_contact_text_content">#212121</color>
+</resources>

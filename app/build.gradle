@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply from: '../config/android/init.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.wangbin.kelin"
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86","armeabi"
+        }
+    }
+    signingConfigs {
+
+        defaultSign {
+            keyAlias rootProject.ext.signing_default.keyAlias
+            keyPassword rootProject.ext.signing_default.keyPassword
+            storeFile file(rootProject.ext.signing_default.storeFile)
+            storePassword rootProject.ext.signing_default.storePassword
+        }
+
+        releaseSign {
+            keyAlias rootProject.ext.signing_release.keyAlias
+            keyPassword rootProject.ext.signing_release.keyPassword
+            storeFile file(rootProject.ext.signing_release.storeFile)
+            storePassword rootProject.ext.signing_release.storePassword
+        }
+    }
+    buildTypes {
+
+        release {
+            signingConfig signingConfigs.releaseSign
+            jniDebuggable false
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+        }
+        alpha {
+            signingConfig signingConfigs.releaseSign
+            initWith release
+            jniDebuggable true
+            debuggable true
+            shrinkResources false
+            minifyEnabled false
+            matchingFallbacks = ['release']
+
+        }
+        debug {
+            signingConfig signingConfigs.defaultSign
+            jniDebuggable true
+            debuggable true
+            shrinkResources false
+            minifyEnabled false
+
+
+        }
+    }
+    dexOptions {
+        preDexLibraries true //对Libraries进行预编译
+        javaMaxHeapSize "2g" //用于dex的jvm大小
+        dexInProcess true //并行编译dex文件
+        maxProcessCount 8 //并行编译线程，设置为cpu数
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':common')
+    implementation rootProject.ext.dependencies["multidex"]
+//    implementation rootProject.ext.dependencies["rxlifecycle_components"]
+
+
+}

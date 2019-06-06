@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hwgo.kelin">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.hwgo.kelin.HHGApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.hwgo.kelin.main.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.hwgo.kelin.messengerdemo.MyService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.wangbin.kelin.messengerdemo.myservice" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.hwgo.kelin.messengerdemo.ClientActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hwgo.kelin.threaddemo.ThreadDemoActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

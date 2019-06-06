@@ -1,0 +1,44 @@
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        checkAllWarnings true
+    }
+
+    aaptOptions {
+        cruncherEnabled false
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dependencies {
+        implementation rootProject.ext.dependencies["appcompat-v7"]
+        implementation rootProject.ext.dependencies["constraint-layout"]
+        implementation rootProject.ext.dependencies["rxAndroid"]
+        implementation rootProject.ext.dependencies["okhttp"]
+        implementation rootProject.ext.dependencies["retrofit"]
+        implementation rootProject.ext.dependencies["converter-gson"]
+        implementation rootProject.ext.dependencies["adapter-rxjava"]
+        implementation rootProject.ext.dependencies["gson"]
+        implementation rootProject.ext.dependencies["rxlifecycle"]
+        implementation rootProject.ext.dependencies["rxlifecycle_android"]
+        implementation rootProject.ext.dependencies["rxpermissions"]
+        implementation rootProject.ext.dependencies["glide"]
+        annotationProcessor rootProject.ext.dependencies["glide_compiler"]
+//    implementation rootProject.ext.dependencies["rxlifecycle_components"]
+
+
+    }
+}
