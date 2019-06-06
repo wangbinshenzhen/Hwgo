@@ -1,6 +1,6 @@
 package com.hwgo.kelin.main.service;
 
-import com.hwgo.common.http.HttpResult;
+import com.hwgo.base.http.HttpResult;
 import com.hwgo.kelin.main.bean.User;
 
 import io.reactivex.Observable;

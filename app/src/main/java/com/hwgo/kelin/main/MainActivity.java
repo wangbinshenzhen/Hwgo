@@ -7,8 +7,8 @@ import android.util.Log;
 
 import com.hwgo.firstmodule.RxStudyActivity;
 import com.hwgo.kelin.R;
-import com.hwgo.common.http.HttpRequestManager;
-import com.hwgo.common.http.HttpResult;
+import com.hwgo.base.http.HttpRequestManager;
+import com.hwgo.base.http.HttpResult;
 import com.hwgo.kelin.main.bean.User;
 import com.hwgo.kelin.main.service.MovieService;
 import com.hwgo.kelin.messengerdemo.ClientActivity;

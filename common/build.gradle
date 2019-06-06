@@ -2,6 +2,6 @@ apply plugin: 'com.android.library'
 apply from: '../config/android/init.gradle'
 
 dependencies {
-    implementation project(':base')
+    api project(':base')
 
 }
