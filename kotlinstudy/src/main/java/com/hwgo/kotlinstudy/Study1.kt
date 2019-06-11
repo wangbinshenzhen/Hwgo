@@ -20,8 +20,6 @@ class Study1 {
     fun show2() {
         val a: Int = 10000
         print(a == a)//输出“true”
-
-
         val boxedA: Int? = a
         val anotherBoxedA: Int? = a
         print(boxedA == anotherBoxedA)//输出“true”
