@@ -347,11 +347,7 @@ public class AppUtil {
         }
     }
 
-    /**
-     *<br> Description: 显示软键盘
-     *
-     * @param view     控制view
-     */
+
     public static void showSoftInput(View view) {
         InputMethodManager imm = (InputMethodManager)ApplicationContext.instance().getSystemService(
                 Context.INPUT_METHOD_SERVICE);

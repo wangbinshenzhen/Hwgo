@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply from: '../config/android/init.gradle'
 
 android {
@@ -72,7 +74,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':rxjavastudy')
     implementation rootProject.ext.dependencies["multidex"]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    implementation rootProject.ext.dependencies["rxlifecycle_components"]
 
 
+}
+repositories {
+    mavenCentral()
 }

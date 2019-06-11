@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlinstudy/kotlinstudy.iml" filepath="$PROJECT_DIR$/kotlinstudy/kotlinstudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavastudy/rxjavastudy.iml" filepath="$PROJECT_DIR$/rxjavastudy/rxjavastudy.iml" />
     </modules>
   </component>

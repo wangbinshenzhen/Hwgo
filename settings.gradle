@@ -1,1 +1,1 @@
-include ':app',  ':base', ':common',':rxjavastudy'
+include ':app',  ':base', ':common',':rxjavastudy', ':kotlinstudy'
