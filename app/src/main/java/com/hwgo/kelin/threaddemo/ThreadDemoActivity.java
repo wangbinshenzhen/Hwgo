@@ -8,6 +8,9 @@ import android.util.Log;
 import com.hwgo.kelin.R;
 
 public class ThreadDemoActivity extends AppCompatActivity {
+    public static  void main(String[] args){
+
+    }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

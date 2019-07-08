@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.gotoStudyActivity).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, RxStudyActivity.class));
         });
+        findViewById(R.id.gotoCoordinatorLayoutActivity).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+        });
 
     }
 

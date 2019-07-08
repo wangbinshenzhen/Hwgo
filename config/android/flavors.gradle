@@ -1,0 +1,8 @@
+android {
+    flavorDimensions "wangbin"
+    productFlavors {
+        flavorsOne {
+            buildConfigField "String", "flavorsName", '"flavorsOne"'
+        }
+    }
+}

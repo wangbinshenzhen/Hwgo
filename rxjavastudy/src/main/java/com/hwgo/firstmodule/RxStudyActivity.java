@@ -17,12 +17,18 @@ import io.reactivex.schedulers.Schedulers;
 public class RxStudyActivity extends AppCompatActivity {
     static final String TAG = RxStudyActivity.class.getSimpleName();
 
+    public static void main(String[] args) {
+        // rxSchedulerCut();
+        rxConcat();
+    }
+
     @Override
     protected void onCreate(@android.support.annotation.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //rxDemo1();
         //rxSchedulerCut();
-        rxMap();
+        //rxMap();
+        //rxConcat();
     }
 
     private void rxDemo1() {
@@ -79,50 +85,23 @@ public class RxStudyActivity extends AppCompatActivity {
      * (多次指定发射事件的线程只有第一次指定的有效，也就是说多次调用 subscribeOn() 只有第一次的有效，其余的会被忽略。
      * 但多次指定订阅者接收线程是可以的，也就是说每调用一次 observerOn()，下游的线程就会切换一次)
      */
-    public void rxSchedulerCut() {
-        Observable.create(new ObservableOnSubscribe<Integer>() {
-            @Override
-            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
-                emitter.onNext(1);
-                emitter.onComplete();
-                Log.e(TAG, "Observable thread is : " + Thread.currentThread().getName());
+    public static void rxSchedulerCut() {
+        Observable.create((ObservableOnSubscribe<Integer>) emitter -> {
+            emitter.onNext(1);
+            emitter.onComplete();
+            Log.e(TAG, "Observable thread is : " + Thread.currentThread().getName());
 
-            }
         }).subscribeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnNext(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName());
-
-                    }
-                })
-                .doOnNext(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName());
-
-                    }
-                })
-                .doOnNext(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName());
-
-                    }
-                })
+                //.subscribeOn(AndroidSchedulers.mainThread())
+                // .observeOn(AndroidSchedulers.mainThread())
+                .doOnNext(integer -> Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName()))
+                .doOnNext(integer -> Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName()))
+                .doOnNext(integer -> Log.e(TAG, "After observeOn(mainThread)，Current thread is " + Thread.currentThread().getName()))
                 .observeOn(Schedulers.io())
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(Integer integer) throws Exception {
-                        Log.e(TAG, "After observeOn(io)，Current thread is " + Thread.currentThread().getName());
-
-                    }
-                });
+                .subscribe(integer -> Log.e(TAG, "After observeOn(io)，Current thread is " + Thread.currentThread().getName()));
     }
 
-    public void rxMap() {
+    public static void rxMap() {
         Observable.create(new ObservableOnSubscribe<Integer>() {
             @Override
             public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
@@ -158,8 +137,28 @@ public class RxStudyActivity extends AppCompatActivity {
                 });
     }
 
-    public void rxConcat(){
+    public static void rxConcat() {
+        Observable.just("abc").subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(String s) {
+                Log.d("wangbin", "onNext =" + s);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.d("wangbin", "onError");
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("wangbin", "onComplete");
+            }
+        });
     }
 
 }

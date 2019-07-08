@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.hwgo.kelin">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,7 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
             android:name="com.hwgo.kelin.main.MainActivity"
             android:screenOrientation="portrait">
@@ -36,6 +38,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.hwgo.kelin.threaddemo.ThreadDemoActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" /><activity
+            android:name=".main.CoordinatorLayoutActivity"
             android:process=":wangbin"
             android:screenOrientation="portrait" />
 

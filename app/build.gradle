@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply from: '../config/android/init.gradle'
+apply from: '../config/android/flavors.gradle'
 
 android {
     defaultConfig {
@@ -10,7 +11,7 @@ android {
         versionName rootProject.ext.android.versionName
         multiDexEnabled true
         ndk {
-            abiFilters "armeabi-v7a", "x86","armeabi"
+            abiFilters "armeabi-v7a", "x86", "armeabi"
         }
     }
     signingConfigs {
@@ -31,34 +32,55 @@ android {
     }
     buildTypes {
 
-        release {
-            signingConfig signingConfigs.releaseSign
-            jniDebuggable false
-            debuggable false
-            shrinkResources true
-            minifyEnabled true
-            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-
-        }
-        alpha {
-            signingConfig signingConfigs.releaseSign
-            initWith release
-            jniDebuggable true
-            debuggable true
-            shrinkResources false
-            minifyEnabled false
-            matchingFallbacks = ['release']
-
-        }
         debug {
             signingConfig signingConfigs.defaultSign
             jniDebuggable true
             debuggable true
             shrinkResources false
             minifyEnabled false
+        }
+
+        release {
+            signingConfig signingConfigs.releaseSign
+            jniDebuggable false
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
 
+        }
+
+    }
+    //build apk包名
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appFlag = 'hwgo'
+            // 环境标识
+            def envFlagMap = [
+                    'flavorsOne': 'One_'
+            ]
+            def flavorString = variant.getVariantData().getVariantConfiguration().getFlavorName()
+            def envFlag = envFlagMap.get(flavorString)
+            def appVersion = defaultConfig.versionName
+            // 构建时间，注意时区
+            def buildTime = new Date().format('yyyy-MM-dd HH:mm', TimeZone.getTimeZone('GMT+8:00'))
+            //获取当前分支名
+            def cmd = 'git symbolic-ref --short -q HEAD'
+            def branch = cmd.execute().text.trim().toString()
+            if (project.hasProperty('GIT_BRANCH')) {
+                branch = GIT_BRANCH
+            }
+            // 上架标识
+            def uploadFlag = 'T'
+            if (flavorString == "production") {
+                uploadFlag = 'U'
+            }
+            def packageName = "${appFlag}_${envFlag}${appVersion}_${buildTime}_${branch}_${uploadFlag}"
+            if (variant.name.contains("Debug")) {
+                packageName = "${packageName}_debug"
+            }
+            outputFileName = new File("./", "${packageName}.apk")
         }
     }
     dexOptions {
@@ -73,8 +95,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':rxjavastudy')
+    implementation project(':kotlinstudy')
     implementation rootProject.ext.dependencies["multidex"]
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    implementation rootProject.ext.dependencies["rxlifecycle_components"]
 
 
