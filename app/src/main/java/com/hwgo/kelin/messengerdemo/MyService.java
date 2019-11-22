@@ -22,12 +22,12 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("MyService","onCreate");
+        Log.d("MyService", "onCreate");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("MyService","onStartCommand");
+        Log.d("MyService", "onStartCommand");
         return super.onStartCommand(intent, flags, startId);
 
     }
@@ -35,7 +35,7 @@ public class MyService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d("MyService","onDestroy");
+        Log.d("MyService", "onDestroy");
     }
 
     @SuppressLint("HandlerLeak")
@@ -53,6 +53,7 @@ public class MyService extends Service {
                         e.printStackTrace();
                     }
                     break;
+                default:
 
             }
         }
