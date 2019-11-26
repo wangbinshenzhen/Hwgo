@@ -2,8 +2,8 @@ package com.hwgo.base.monet.loader;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.IntRange;
-import android.support.v4.app.Fragment;
+import androidx.annotation.IntRange;
+import androidx.fragment.app.Fragment;
 
 import com.hwgo.base.monet.strategy.GlideModuleStrategy;
 import com.hwgo.base.monet.strategy.IImageLoadRequest;

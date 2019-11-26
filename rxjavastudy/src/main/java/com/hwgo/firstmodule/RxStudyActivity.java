@@ -1,7 +1,7 @@
 package com.hwgo.firstmodule;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 import io.reactivex.Observable;
@@ -23,7 +23,7 @@ public class RxStudyActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(@android.support.annotation.Nullable Bundle savedInstanceState) {
+    protected void onCreate(@androidx.annotation.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //rxDemo1();
         //rxSchedulerCut();

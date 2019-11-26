@@ -2,7 +2,7 @@ package com.hwgo.base.monet.strategy;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 import android.widget.ImageView;
 
 

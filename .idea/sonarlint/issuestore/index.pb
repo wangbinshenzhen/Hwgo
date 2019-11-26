@@ -27,3 +27,9 @@ H
 kotlinstudy/build.gradle,1/5/15600436749fd134b439ea7ca00b04bf2a7ecef5
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+@
+local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
+X
+(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+R
+"config/android/dependencies.gradle,7/5/756144b219809c4d5823d1bc5bd2629a7707fc9a

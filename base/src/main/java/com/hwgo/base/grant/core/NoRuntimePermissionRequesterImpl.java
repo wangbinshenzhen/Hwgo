@@ -2,8 +2,8 @@ package com.hwgo.base.grant.core;
 
 import android.app.Activity;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.PermissionChecker;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.PermissionChecker;
 
 import com.hwgo.base.grant.PermissionCallback;
 import com.hwgo.base.grant.PermissionRequester;

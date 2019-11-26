@@ -2,7 +2,7 @@ package com.hwgo.base.grant.core;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.hwgo.base.grant.PermissionRequester;
 

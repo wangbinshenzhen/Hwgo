@@ -1,6 +1,6 @@
 package com.hwgo.base.monet.compress;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;

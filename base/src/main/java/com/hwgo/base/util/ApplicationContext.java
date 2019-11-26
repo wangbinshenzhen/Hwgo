@@ -3,9 +3,9 @@ package com.hwgo.base.util;
 import android.app.Application;
 import android.content.res.Resources;
 import android.os.Build;
-import android.support.annotation.ArrayRes;
-import android.support.annotation.ColorRes;
-import android.support.annotation.StringRes;
+import androidx.annotation.ArrayRes;
+import androidx.annotation.ColorRes;
+import androidx.annotation.StringRes;
 import android.util.Log;
 
 /**

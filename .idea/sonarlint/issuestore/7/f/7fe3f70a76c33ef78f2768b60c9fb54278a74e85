@@ -1,7 +1,5 @@
 
-<squid:S1068"%Remove this unused "t" private field.(Þ•ªÆ
+Isquid:S1481/"+Remove this unused "number" local variable.(ÂÐÇÖ8ëé‰¯é-
+Nsquid:S1481+"+Remove this unused "object" local variable.(øí––úÿÿÿÿ8ëé‰¯é-
 =squid:S1068"&Remove this unused "mA" private field.(œÏ¤š
-Gsquid:S1481+"+Remove this unused "object" local variable.(øí––úÿÿÿÿ
-Bsquid:S1481/"+Remove this unused "number" local variable.(ÂÐÇÖ
-Qsquid:S1854/":Remove this useless assignment to local variable "number".(ÂÐÇÖ
-Vsquid:S1854+":Remove this useless assignment to local variable "object".(øí––úÿÿÿÿ
+<squid:S1068"%Remove this unused "t" private field.(Þ•ªÆ
