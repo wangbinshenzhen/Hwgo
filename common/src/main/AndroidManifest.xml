@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".flutter.BaseFlutterActivity"
+            android:name=".flutter.CommonFlutterActivity"
             android:process=":wangbin"
             android:screenOrientation="portrait" />
 

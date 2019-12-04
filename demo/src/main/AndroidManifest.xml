@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wangbin.demo">
+
+    <application>
+
+        <activity
+            android:name=".client.ClientActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thread.ThreadDemoActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coordinator.CoordinatorLayoutActivity"
+            android:process=":wangbin"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".client.MyService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.wangbin.kelin.messengerdemo.myservice" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

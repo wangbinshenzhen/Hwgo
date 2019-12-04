@@ -1,4 +1,4 @@
-package com.hwgo.kelin.messengerdemo;
+package com.wangbin.demo.client;
 
 import android.annotation.SuppressLint;
 import android.app.Service;

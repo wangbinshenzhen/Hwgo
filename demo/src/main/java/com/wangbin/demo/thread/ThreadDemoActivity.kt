@@ -1,15 +1,18 @@
-package com.hwgo.kelin.threaddemo
+package com.wangbin.demo.thread
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.hwgo.common.router.path.RouterPath
 
-import com.hwgo.kelin.R
+import com.wangbin.demo.R
 
+@Route(path = RouterPath.Demo.ThreadDemoActivity)
 class ThreadDemoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_thread_demo)
+        setContentView(R.layout.demo_activity_thread_demo)
         val t = object : Thread() {
             override fun run() {
                 var i = 0

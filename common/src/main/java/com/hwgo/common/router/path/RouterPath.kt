@@ -14,9 +14,23 @@ object RouterPath {
             const val MainActivity = "/app/main"
         }
     }
-    class Flutter{
+
+    class Flutter {
         companion object {
             const val CommonFlutterActivity = "/flutter/common"
+        }
+    }
+
+    class Demo {
+        companion object {
+            const val ClientActivity = "/demo/ClientActivity"
+            const val ThreadDemoActivity = "/demo/ThreadDemoActivity"
+            const val CoordinatorLayoutActivity = "/demo/CoordinatorLayoutActivity"
+        }
+    }
+    class Study{
+        companion object{
+            const val  RxStudyActivity="/rxjavastudy/RxStudyActivity"
         }
     }
 }

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply from: '../config/android/init.gradle'
+
+
+android {
+    defaultConfig {
+        resourcePrefix "uikit_"
+    }
+    buildTypes {
+
+        debug {
+            jniDebuggable true
+            debuggable true
+            minifyEnabled false
+
+
+        }
+
+        release {
+            jniDebuggable false
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+        }
+
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

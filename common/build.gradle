@@ -6,6 +6,9 @@ apply from: '../config/android/flavors.gradle'
 apply from: '../arouter.gradle'
 
 android {
+    defaultConfig {
+        resourcePrefix "common_"
+    }
     buildTypes {
 
         debug {
@@ -31,7 +34,10 @@ android {
 dependencies {
     api project(':base')
     api project(':flutter')
-    api rootProject.ext.dependencies["eventBus"]
+    api project(':uikit')
+    api "org.greenrobot:eventbus:$eventbus_version"
+    implementation "com.alibaba:arouter-api:${arouterApiVersion}"
+    annotationProcessor "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
 
 
 }

@@ -5,7 +5,10 @@ apply from: '../config/android/init.gradle'
 apply from: '../arouter.gradle'
 
 
-android{
+android {
+    defaultConfig {
+        resourcePrefix "kotlin_"
+    }
     buildTypes {
 
         debug {
@@ -25,7 +28,9 @@ android{
     }
 }
 dependencies {
-    api project(':common')
+    implementation project(':common')
+    implementation "com.alibaba:arouter-api:${arouterApiVersion}"
+    annotationProcessor "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
 }
 repositories {
     mavenCentral()

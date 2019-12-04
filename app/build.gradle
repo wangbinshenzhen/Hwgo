@@ -98,5 +98,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':rxjavastudy')
     implementation project(':kotlinstudy')
-    implementation rootProject.ext.dependencies["multidex"]
+    implementation "com.alibaba:arouter-api:${arouterApiVersion}"
+    annotationProcessor "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+    implementation "androidx.multidex:multidex:${multidex_version}"
 }

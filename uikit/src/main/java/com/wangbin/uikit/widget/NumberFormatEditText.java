@@ -1,11 +1,12 @@
-package com.hwgo.base.widget;
+package com.wangbin.uikit.widget;
 
 import android.content.Context;
-import androidx.appcompat.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 
 /**

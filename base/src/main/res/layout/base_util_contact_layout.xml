@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:background="@drawable/util_contact_bg_rounded_box"
+        android:background="@drawable/base_util_contact_bg_rounded_box"
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
@@ -15,22 +15,22 @@
             android:id="@+id/label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/util_contact_bg_head_rounded_box"
+            android:background="@drawable/base_util_contact_bg_head_rounded_box"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@color/util_contact_btn_yellow_default"
+            android:textColor="@color/base_util_contact_btn_yellow_default"
             android:textSize="19sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/util_contact_dividing_line_light" />
+            android:background="@color/base_util_contact_dividing_line_light" />
 
         <ListView
             android:id="@+id/custom_spinner_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/util_contact_bg_bottom_rounded_box"
+            android:background="@drawable/base_util_contact_bg_bottom_rounded_box"
             android:cacheColorHint="@android:color/transparent"
             android:divider="@null"
             android:listSelector="@android:color/transparent"

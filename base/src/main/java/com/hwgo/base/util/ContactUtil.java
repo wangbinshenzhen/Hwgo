@@ -153,7 +153,7 @@ public class ContactUtil {
         if (activity.isFinishing()) {
             return;
         }
-        View view = LayoutInflater.from(context).inflate(R.layout.util_contact_layout, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.base_util_contact_layout, null);
         ((TextView) view.findViewById(R.id.label)).setText("请选择号码");
         List<Map<String, Object>> listData = new ArrayList<Map<String, Object>>();
         for (String str : phoneNum) {
@@ -162,7 +162,7 @@ public class ContactUtil {
             listData.add(map);
         }
         SimpleAdapter mSAdapter = new SimpleAdapter(context, listData,
-                R.layout.util_contact_layout_item, new String[]{
+                R.layout.base_util_contact_layout_item, new String[]{
                 "item_text"}, new int[]{
                 R.id.itemText});
         final AlertDialog dialog = new AlertDialog.Builder(activity).create();
@@ -170,7 +170,7 @@ public class ContactUtil {
         dialog.show();
         dialog.setContentView(view);
         ListView listview = view.findViewById(R.id.custom_spinner_list);
-        listview.setDivider(new ColorDrawable(view.getContext().getResources().getColor(R.color.util_contact_dividing_line_light)));
+        listview.setDivider(new ColorDrawable(view.getContext().getResources().getColor(R.color.base_util_contact_dividing_line_light)));
         listview.setDividerHeight(UiUtil.dp2px(0.5f));
         listview.setAdapter(mSAdapter);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

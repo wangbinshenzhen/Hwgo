@@ -1,4 +1,4 @@
-package com.hwgo.kelin.messengerdemo;
+package com.wangbin.demo.client;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -10,17 +10,21 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.hwgo.kelin.R;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.hwgo.common.router.path.RouterPath;
+import com.wangbin.demo.R;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 
+@Route(path = RouterPath.Demo.ClientActivity)
 public class ClientActivity extends AppCompatActivity {
     private Messenger serverMsger;
     private boolean isBond;
@@ -30,7 +34,7 @@ public class ClientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_layout);
+        setContentView(R.layout.demo_activity_client_layout);
         findViewById(R.id.button).setOnClickListener(v -> {
             if (isBond) {
                 Message toServerMsg = Message.obtain();

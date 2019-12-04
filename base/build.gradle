@@ -3,10 +3,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply from: '../config/android/init.gradle'
 apply from: '../config/android/flavors.gradle'
-apply from: '../arouter.gradle'
 
 
 android {
+    defaultConfig {
+        resourcePrefix "base_"
+    }
     buildTypes {
 
         debug {
@@ -28,8 +30,8 @@ android {
     }
 }
 dependencies {
-    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
-    api rootProject.ext.dependencies["http_logging_interceptor"]
+    implementation "com.github.franmontiel:PersistentCookieJar:${persistentCookieJar_version}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okhttp_logging_interceptor_version}"
 }
 repositories {
     mavenCentral()

@@ -1,8 +1,13 @@
 package com.hwgo.firstmodule;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.util.Log;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.hwgo.common.router.path.RouterPath;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -14,6 +19,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
+@Route(path = RouterPath.Study.RxStudyActivity)
 public class RxStudyActivity extends AppCompatActivity {
     static final String TAG = RxStudyActivity.class.getSimpleName();
 

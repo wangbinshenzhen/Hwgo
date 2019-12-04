@@ -6,6 +6,9 @@ apply from: '../arouter.gradle'
 
 
 android{
+    defaultConfig {
+        resourcePrefix "rxjava_"
+    }
     buildTypes {
 
         debug {
@@ -25,7 +28,9 @@ android{
     }
 }
 dependencies {
-    api project(':common')
+    implementation project(':common')
+    implementation "com.alibaba:arouter-api:${arouterApiVersion}"
+    annotationProcessor "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
 }
 repositories {
     mavenCentral()

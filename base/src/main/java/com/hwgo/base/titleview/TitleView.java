@@ -48,7 +48,7 @@ public class TitleView
     }
 
     private void init(Context context, AttributeSet attrs) {
-        LayoutInflater.from(context).inflate(R.layout.titleview_simple_layout, this, true);
+        LayoutInflater.from(context).inflate(R.layout.base_titleview_simple_layout, this, true);
         mLeft_1 = findViewById(R.id.tv_titleview_left_1);
         mLeft_2 = findViewById(R.id.tv_titleview_left_2);
         mMiddle_1 = findViewById(R.id.tv_titleview_middle_1);
@@ -58,7 +58,7 @@ public class TitleView
         mLl_middle = findViewById(R.id.ll_titleview_middle);
         //
         if (attrs != null) {
-            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TitleView);
+            TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.base_TitleView);
             formatValue(typedArray);
             typedArray.recycle();
         }
@@ -72,136 +72,136 @@ public class TitleView
 
     private void formatValue(TypedArray typedArray) {
         {
-            String middle = typedArray.getString(R.styleable.TitleView_titleview_middle_1_text);
+            String middle = typedArray.getString(R.styleable.base_TitleView_base_titleview_middle_1_text);
             if (middle != null) {
                 mMiddle_1.setText(middle);
             }
-            int middle_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_middle_1_textSize, -1);
+            int middle_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_middle_1_textSize, -1);
             if (middle_textSize > 0) {
                 mMiddle_1.setTextSize(TypedValue.COMPLEX_UNIT_PX, middle_textSize);
             }
-            int middle_textColor = typedArray.getColor(R.styleable.TitleView_titleview_middle_1_textColor, Integer.MIN_VALUE);
+            int middle_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_middle_1_textColor, Integer.MIN_VALUE);
             if (middle_textColor != Integer.MIN_VALUE) {
                 mMiddle_1.setTextColor(middle_textColor);
             }
         }
         {
-            String middle = typedArray.getString(R.styleable.TitleView_titleview_middle_2_text);
+            String middle = typedArray.getString(R.styleable.base_TitleView_base_titleview_middle_2_text);
             if (middle != null) {
                 mMiddle_2.setVisibility(View.VISIBLE);
                 mMiddle_2.setText(middle);
             }
-            int middle_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_middle_2_textSize, -1);
+            int middle_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_middle_2_textSize, -1);
             if (middle_textSize > 0) {
                 mMiddle_2.setTextSize(TypedValue.COMPLEX_UNIT_PX, middle_textSize);
             }
-            int middle_textColor = typedArray.getColor(R.styleable.TitleView_titleview_middle_2_textColor, Integer.MIN_VALUE);
+            int middle_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_middle_2_textColor, Integer.MIN_VALUE);
             if (middle_textColor != Integer.MIN_VALUE) {
                 mMiddle_2.setTextColor(middle_textColor);
             }
         }
         {
-            int middle_paddingLeft = (int) typedArray.getDimension(R.styleable.TitleView_titleview_middle_paddingLeft, 0);
-            int middle_paddingRight = (int) typedArray.getDimension(R.styleable.TitleView_titleview_middle_paddingRight, 0);
+            int middle_paddingLeft = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_middle_paddingLeft, 0);
+            int middle_paddingRight = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_middle_paddingRight, 0);
             if (middle_paddingLeft > 0 || middle_paddingRight > 0) {
                 mLl_middle.setPadding(middle_paddingLeft, 0, middle_paddingRight, 0);
             }
         }
         {
-            String left = typedArray.getString(R.styleable.TitleView_titleview_left_text);
+            String left = typedArray.getString(R.styleable.base_TitleView_base_titleview_left_text);
             if (left != null) {
                 mLeft_1.setText(left);
             }
-            int left_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_left_textSize, -1);
+            int left_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_left_textSize, -1);
             if (left_textSize > 0) {
                 mLeft_1.setTextSize(TypedValue.COMPLEX_UNIT_PX, left_textSize);
             }
-            int left_paddingLeft = (int) typedArray.getDimension(R.styleable.TitleView_titleview_left_paddingLeft, 0);
-            int left_paddingRight = (int) typedArray.getDimension(R.styleable.TitleView_titleview_left_paddingRight, 0);
+            int left_paddingLeft = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_left_paddingLeft, 0);
+            int left_paddingRight = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_left_paddingRight, 0);
             if (left_paddingLeft > 0 || left_paddingRight > 0) {
                 mLeft_1.setPadding(left_paddingLeft, 0, left_paddingRight, 0);
             }
-            int left_textColor = typedArray.getColor(R.styleable.TitleView_titleview_left_textColor, Integer.MIN_VALUE);
+            int left_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_left_textColor, Integer.MIN_VALUE);
             if (left_textColor != Integer.MIN_VALUE) {
                 mLeft_1.setTextColor(left_textColor);
             }
-            Drawable left_drawable = typedArray.getDrawable(R.styleable.TitleView_titleview_left_drawable);
-            Drawable left_background = typedArray.getDrawable(R.styleable.TitleView_titleview_left_background);
+            Drawable left_drawable = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_left_drawable);
+            Drawable left_background = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_left_background);
             if (left_background != null) {
                 mLeft_1.setBackgroundDrawable(left_background);
             }
             setTextViewDrawable(mLeft_1, left_drawable, true);
         }
         {
-            String left = typedArray.getString(R.styleable.TitleView_titleview_left_2_text);
+            String left = typedArray.getString(R.styleable.base_TitleView_base_titleview_left_2_text);
             if (left != null) {
                 mLeft_2.setText(left);
             }
-            int left_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_left_2_textSize, -1);
+            int left_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_left_2_textSize, -1);
             if (left_textSize > 0) {
                 mLeft_2.setTextSize(TypedValue.COMPLEX_UNIT_PX, left_textSize);
             }
-            int left_paddingLeft = (int) typedArray.getDimension(R.styleable.TitleView_titleview_left_2_paddingLeft, 0);
-            int left_paddingRight = (int) typedArray.getDimension(R.styleable.TitleView_titleview_left_2_paddingRight, 0);
+            int left_paddingLeft = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_left_2_paddingLeft, 0);
+            int left_paddingRight = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_left_2_paddingRight, 0);
             if (left_paddingLeft > 0 || left_paddingRight > 0) {
                 mLeft_2.setPadding(left_paddingLeft, 0, left_paddingRight, 0);
             }
-            int left_textColor = typedArray.getColor(R.styleable.TitleView_titleview_left_2_textColor, Integer.MIN_VALUE);
+            int left_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_left_2_textColor, Integer.MIN_VALUE);
             if (left_textColor != Integer.MIN_VALUE) {
                 mLeft_2.setTextColor(left_textColor);
             }
-            Drawable left_drawable = typedArray.getDrawable(R.styleable.TitleView_titleview_left_2_drawable);
-            Drawable left_background = typedArray.getDrawable(R.styleable.TitleView_titleview_left_2_background);
+            Drawable left_drawable = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_left_2_drawable);
+            Drawable left_background = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_left_2_background);
             if (left_background != null) {
                 mLeft_2.setBackgroundDrawable(left_background);
             }
             setTextViewDrawable(mLeft_2, left_drawable, true);
         }
         {
-            String right = typedArray.getString(R.styleable.TitleView_titleview_right_text);
+            String right = typedArray.getString(R.styleable.base_TitleView_base_titleview_right_text);
             if (right != null) {
                 mRight_1.setText(right);
             }
-            int right_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_right_textSize, -1);
+            int right_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_right_textSize, -1);
             if (right_textSize > 0) {
                 mRight_1.setTextSize(TypedValue.COMPLEX_UNIT_PX, right_textSize);
             }
-            int right_paddingLeft = (int) typedArray.getDimension(R.styleable.TitleView_titleview_right_paddingLeft, 0);
-            int right_paddingRight = (int) typedArray.getDimension(R.styleable.TitleView_titleview_right_paddingRight, 0);
+            int right_paddingLeft = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_right_paddingLeft, 0);
+            int right_paddingRight = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_right_paddingRight, 0);
             if (right_paddingLeft > 0 || right_paddingRight > 0) {
                 mRight_1.setPadding(right_paddingLeft, 0, right_paddingRight, 0);
             }
-            int right_textColor = typedArray.getColor(R.styleable.TitleView_titleview_right_textColor, Integer.MIN_VALUE);
+            int right_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_right_textColor, Integer.MIN_VALUE);
             if (right_textColor != Integer.MIN_VALUE) {
                 mRight_1.setTextColor(right_textColor);
             }
-            Drawable right_drawable = typedArray.getDrawable(R.styleable.TitleView_titleview_right_drawable);
-            Drawable right_background = typedArray.getDrawable(R.styleable.TitleView_titleview_right_background);
+            Drawable right_drawable = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_right_drawable);
+            Drawable right_background = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_right_background);
             if (right_background != null) {
                 mRight_1.setBackgroundDrawable(right_background);
             }
             setTextViewDrawable(mRight_1, right_drawable, false);
         }
         {
-            String right = typedArray.getString(R.styleable.TitleView_titleview_right_2_text);
+            String right = typedArray.getString(R.styleable.base_TitleView_base_titleview_right_2_text);
             if (right != null) {
                 mRight_2.setText(right);
             }
-            int right_textSize = typedArray.getDimensionPixelSize(R.styleable.TitleView_titleview_right_2_textSize, -1);
+            int right_textSize = typedArray.getDimensionPixelSize(R.styleable.base_TitleView_base_titleview_right_2_textSize, -1);
             if (right_textSize > 0) {
                 mRight_2.setTextSize(TypedValue.COMPLEX_UNIT_PX, right_textSize);
             }
-            int right_paddingLeft = (int) typedArray.getDimension(R.styleable.TitleView_titleview_right_2_paddingLeft, 0);
-            int right_paddingRight = (int) typedArray.getDimension(R.styleable.TitleView_titleview_right_2_paddingRight, 0);
+            int right_paddingLeft = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_right_2_paddingLeft, 0);
+            int right_paddingRight = (int) typedArray.getDimension(R.styleable.base_TitleView_base_titleview_right_2_paddingRight, 0);
             if (right_paddingLeft > 0 || right_paddingRight > 0) {
                 mRight_2.setPadding(right_paddingLeft, 0, right_paddingRight, 0);
             }
-            int right_textColor = typedArray.getColor(R.styleable.TitleView_titleview_right_2_textColor, Integer.MIN_VALUE);
+            int right_textColor = typedArray.getColor(R.styleable.base_TitleView_base_titleview_right_2_textColor, Integer.MIN_VALUE);
             if (right_textColor != Integer.MIN_VALUE) {
                 mRight_2.setTextColor(right_textColor);
             }
-            Drawable right_drawable = typedArray.getDrawable(R.styleable.TitleView_titleview_right_2_drawable);
-            Drawable right_background = typedArray.getDrawable(R.styleable.TitleView_titleview_right_2_background);
+            Drawable right_drawable = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_right_2_drawable);
+            Drawable right_background = typedArray.getDrawable(R.styleable.base_TitleView_base_titleview_right_2_background);
             if (right_background != null) {
                 mRight_2.setBackgroundDrawable(right_background);
             }
