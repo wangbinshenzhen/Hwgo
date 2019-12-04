@@ -13,9 +13,12 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/kotlinstudy" />
             <option value="$PROJECT_DIR$/rxjavastudy" />
+            <option value="$PROJECT_DIR$/../my_flutter" />
+            <option value="$PROJECT_DIR$/../my_flutter/.android/Flutter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

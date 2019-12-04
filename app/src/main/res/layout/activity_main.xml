@@ -32,4 +32,10 @@
         android:layout_height="wrap_content"
         android:text="goto CoordinatorLayout Activity" />
 
+    <Button
+        android:id="@+id/openFlutter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="openFlutter" />
+
 </LinearLayout>

@@ -2,11 +2,14 @@ package com.hwgo.kelin.main
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.hwgo.base.http.HttpRequestManager
 import com.hwgo.base.http.HttpResult
+import com.hwgo.common.router.path.RouterPath
+import com.hwgo.common.flutter.BaseFlutterActivity
 import com.hwgo.firstmodule.RxStudyActivity
 import com.hwgo.kelin.R
 import com.hwgo.kelin.main.bean.User
@@ -18,15 +21,19 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_main.*
 
+@Route(path = RouterPath.Main.MainActivity)
 class MainActivity : AppCompatActivity() {
     internal var compositeDisposable = CompositeDisposable()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        openFlutter.setOnClickListener {
+            startActivity(Intent(this, BaseFlutterActivity::class.java))
+        }
         findViewById<View>(R.id.button3).setOnClickListener { v -> startActivity(Intent(this, ClientActivity::class.java)) }
-
         val moviceService = HttpRequestManager.getInstance().createService(MovieService::class.java)
         val kelin = moviceService.user
         kelin.subscribeOn(Schedulers.io())

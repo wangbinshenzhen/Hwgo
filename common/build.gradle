@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply from: '../config/android/init.gradle'
 apply from: '../config/android/flavors.gradle'
+apply from: '../arouter.gradle'
 
 android {
     buildTypes {
@@ -29,6 +30,10 @@ android {
 }
 dependencies {
     api project(':base')
+    api project(':flutter')
+    api rootProject.ext.dependencies["eventBus"]
+
+
 }
 repositories {
     mavenCentral()
