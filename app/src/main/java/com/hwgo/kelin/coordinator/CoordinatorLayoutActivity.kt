@@ -1,4 +1,4 @@
-package com.hwgo.kelin.main
+package com.hwgo.kelin.coordinator
 
 import android.os.Bundle
 import androidx.core.widget.NestedScrollView

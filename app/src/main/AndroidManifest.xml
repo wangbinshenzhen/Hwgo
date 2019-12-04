@@ -39,8 +39,9 @@
         <activity
             android:name="com.hwgo.kelin.threaddemo.ThreadDemoActivity"
             android:process=":wangbin"
-            android:screenOrientation="portrait" /><activity
-            android:name=".main.CoordinatorLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coordinator.CoordinatorLayoutActivity"
             android:process=":wangbin"
             android:screenOrientation="portrait" />
 

@@ -54,8 +54,8 @@ rootProject.ext {
             "junit"                   : "junit:junit:4.12",
             "kotlin"                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
             "arouter"                 : "com.alibaba:arouter-api:${arouterApiVersion}",
-            "annotationProcessor"     : "com.alibaba:arouter-compiler:${arouterCompilerVersion}",
-            "eventBus"     : "org.greenrobot:eventbus:$eventbus_version"
+            "arouter_compiler"        : "com.alibaba:arouter-compiler:${arouterCompilerVersion}",
+            "eventBus"                : "org.greenrobot:eventbus:$eventbus_version"
 
     ]
 

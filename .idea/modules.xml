@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hwgo.iml" filepath="$PROJECT_DIR$/Hwgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Hwgo.iml" filepath="$PROJECT_DIR$/.idea/Hwgo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../my_flutter/.android/Flutter/flutter.iml" filepath="$PROJECT_DIR$/../my_flutter/.android/Flutter/flutter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/flutter_module/flutter_module.iml" filepath="$PROJECT_DIR$/flutter_module/flutter_module.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlinstudy/kotlinstudy.iml" filepath="$PROJECT_DIR$/kotlinstudy/kotlinstudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../my_flutter/my_flutter.iml" filepath="$PROJECT_DIR$/../my_flutter/my_flutter.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavastudy/rxjavastudy.iml" filepath="$PROJECT_DIR$/rxjavastudy/rxjavastudy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/www.iml" filepath="$PROJECT_DIR$/.idea/modules/www.iml" group="www" />
     </modules>
   </component>
 </project>

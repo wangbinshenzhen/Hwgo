@@ -2,8 +2,6 @@ package com.hwgo.base.http.bean;
 
 import android.text.TextUtils;
 
-import com.casstime.base.net.bean.BaseResponse;
-import com.casstime.base.net.bean.CECErrorResponseBody;
 import com.hwgo.base.http.HGHttpErrorHandler;
 
 
@@ -11,13 +9,13 @@ import com.hwgo.base.http.HGHttpErrorHandler;
  * Created by maiwenchang at 2019-06-06 16:06
  * Description ：
  */
-public class CECHttpErrorResponse<E> {
+public class HGHttpErrorResponse<E> {
 
     private BaseResponse<E> baseResponse;
 
     private Throwable e;
 
-    public CECHttpErrorResponse(Throwable e) {
+    public HGHttpErrorResponse(Throwable e) {
         this.e = e;
     }
 
@@ -25,7 +23,7 @@ public class CECHttpErrorResponse<E> {
         if (baseResponse != null) {
             return baseResponse;
         }
-        CECErrorResponseBody responseBody = HGHttpErrorHandler.handle(e);
+        HGErrorResponseBody responseBody = HGHttpErrorHandler.handle(e);
         String unknownMessage = "服务器异常";
         if (responseBody == null) {
             if (e != null) {

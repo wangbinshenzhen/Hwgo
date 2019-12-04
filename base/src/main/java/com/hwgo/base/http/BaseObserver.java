@@ -7,8 +7,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.casstime.base.net.bean.BaseResponse;
-import com.hwgo.base.http.bean.CECHttpErrorResponse;
+import com.hwgo.base.http.bean.BaseResponse;
+import com.hwgo.base.http.bean.HGHttpErrorResponse;
 import com.hwgo.base.util.ApplicationContext;
 
 import io.reactivex.Observer;
@@ -44,7 +44,7 @@ public class BaseObserver<E> implements Observer<BaseResponse<E>> {
     @Override
     public void onError(Throwable e) {
         // 拦截错误信息
-        BaseResponse<E> baseResponse = new CECHttpErrorResponse<E>(e).getBaseResponse();
+        BaseResponse<E> baseResponse = new HGHttpErrorResponse<E>(e).getBaseResponse();
         onFailure(baseResponse, baseResponse.getErrorCode(), baseResponse.getMessage());
     }
 

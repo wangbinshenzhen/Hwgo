@@ -1,5 +1,0 @@
-
-bsquid:S13012"KReplace this "switch" statement by "if" statements to increase readability.(éýŒÏ
-‡"squid:SwitchLastCaseIsDefaultCheck2"YComplete cases by adding the missing enum constants or add a default case to this switch.(éýŒÏ
-Zsquid:S1155A">Use isEmpty() to check whether the collection is empty or not.(ÂÉœ«ùÿÿÿÿ
-Zsquid:S1155D">Use isEmpty() to check whether the collection is empty or not.(Á÷ô›øÿÿÿÿ

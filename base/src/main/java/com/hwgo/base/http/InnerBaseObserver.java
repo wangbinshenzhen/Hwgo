@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 
-import com.casstime.base.net.bean.BaseResponse;
+import com.hwgo.base.http.bean.BaseResponse;
 
 /**
  * 对LiveData内置处理

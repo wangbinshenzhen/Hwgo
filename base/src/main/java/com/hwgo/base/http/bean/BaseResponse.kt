@@ -1,4 +1,4 @@
-package com.casstime.base.net.bean
+package com.hwgo.base.http.bean
 
 import java.io.Serializable
 

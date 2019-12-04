@@ -3,7 +3,7 @@ package com.hwgo.base.http;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.casstime.base.net.bean.BaseResponse;
+import com.hwgo.base.http.bean.BaseResponse;
 
 import io.reactivex.disposables.Disposable;
 

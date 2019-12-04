@@ -1,7 +1,7 @@
 package com.hwgo.base.http;
 
-import com.casstime.base.net.bean.CECErrorResponseBody;
 import com.google.gson.Gson;
+import com.hwgo.base.http.bean.HGErrorResponseBody;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -23,11 +23,11 @@ public class HGHttpErrorHandler {
 
     private HGHttpErrorHandler(){}
 
-    public static CECErrorResponseBody handle(Throwable throwable) {
+    public static HGErrorResponseBody handle(Throwable throwable) {
         if (throwable instanceof CTNoNetworkException) {
             String noNetworkMessage = "网络不可用，请检查网络设置";
             String errorCode = "NETWORK_UNAVAILABLE";
-            return new CECErrorResponseBody(-1,
+            return new HGErrorResponseBody(-1,
                     noNetworkMessage, noNetworkMessage,
                     errorCode, errorCode, noNetworkMessage);
         } else if (throwable instanceof HttpException) {
@@ -41,13 +41,13 @@ public class HGHttpErrorHandler {
                 ResponseBody body = response.errorBody();
                 if (body != null) {
                     String responseBody = getBodyString(body);
-                    return new Gson().fromJson(responseBody, CECErrorResponseBody.class);
+                    return new Gson().fromJson(responseBody, HGErrorResponseBody.class);
                 }
             } catch (Exception e) {
                 //do nothing
             }
         } else { //其他异常
-            return new CECErrorResponseBody(-1,
+            return new HGErrorResponseBody(-1,
                     throwable.getMessage(), throwable.getMessage(),
                     "", "", throwable.getMessage());
         }
