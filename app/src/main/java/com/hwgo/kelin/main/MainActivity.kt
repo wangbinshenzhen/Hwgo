@@ -1,10 +1,9 @@
 package com.hwgo.kelin.main
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.hwgo.common.router.helper.ForwardHelper
+import com.alibaba.android.arouter.launcher.ARouter
 import com.hwgo.common.router.path.RouterPath
 import com.hwgo.kelin.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,20 +14,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         openFlutter.setOnClickListener {
-            ForwardHelper.forward2NativePage(RouterPath.Flutter.CommonFlutterActivity, null)
+            ARouter.getInstance().build(RouterPath.Flutter.CommonFlutterActivity).navigation()
         }
-        findViewById<View>(R.id.button3).setOnClickListener {
-            ForwardHelper.forward2NativePage(RouterPath.Demo.ClientActivity, null)
-
+        gotoClientActivityDemo.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.Demo.ClientActivity).navigation()
         }
-        findViewById<View>(R.id.button7).setOnClickListener {
-            ForwardHelper.forward2NativePage(RouterPath.Demo.ThreadDemoActivity, null)
+        gotoThreadDemoActivity.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.Demo.ThreadDemoActivity).navigation()
         }
-        findViewById<View>(R.id.gotoStudyActivity).setOnClickListener {
-            ForwardHelper.forward2NativePage(RouterPath.Study.RxStudyActivity, null)
+        gotoRxJavaStudyActivity.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.Study.RxStudyActivity).navigation()
         }
-        findViewById<View>(R.id.gotoCoordinatorLayoutActivity).setOnClickListener {
-            ForwardHelper.forward2NativePage(RouterPath.Demo.CoordinatorLayoutActivity, null)
+        gotoCoordinatorLayoutActivity.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.Demo.CoordinatorLayoutActivity).navigation()
+        }
+        openMain.setOnClickListener {
+            ARouter.getInstance().build(RouterPath.Main.MainActivity).navigation()
         }
 
     }

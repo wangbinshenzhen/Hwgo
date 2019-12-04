@@ -9,33 +9,39 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/gotoClientActivityDemo"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:text="gotoClientActivityDemo" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/gotoThreadDemoActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="goto Thread demo activity" />
+        android:text="gotoThreadDemoActivity" />
 
     <Button
-        android:id="@+id/gotoStudyActivity"
+        android:id="@+id/gotoRxJavaStudyActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="goto RxJava Study Activity" />
+        android:text="gotoRxJavaStudyActivity" />
 
     <Button
         android:id="@+id/gotoCoordinatorLayoutActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="goto CoordinatorLayout Activity" />
+        android:text="gotoCoordinatorLayoutActivity" />
 
     <Button
         android:id="@+id/openFlutter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="openFlutter" />
+
+    <Button
+        android:id="@+id/openMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="openMain" />
 
 </LinearLayout>

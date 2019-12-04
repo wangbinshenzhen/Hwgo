@@ -1,8 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply from: '../config/android/init.gradle'
 apply from: '../arouter.gradle'
+
 
 
 android {
