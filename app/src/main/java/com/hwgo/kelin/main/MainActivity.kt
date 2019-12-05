@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         openFlutter.setOnClickListener {
             ARouter.getInstance().build(RouterPath.Flutter.CommonFlutterActivity).navigation()
+            openFlutter.postDelayed({
+                ARouter.getInstance().build(RouterPath.Flutter.CommonFlutterActivity).navigation()
+            },3000)
         }
         gotoClientActivityDemo.setOnClickListener {
             ARouter.getInstance().build(RouterPath.Demo.ClientActivity).navigation()

@@ -4,7 +4,6 @@
     <application>
         <activity
             android:name=".flutter.CommonFlutterActivity"
-            android:process=":wangbin"
             android:screenOrientation="portrait" />
 
     </application>
